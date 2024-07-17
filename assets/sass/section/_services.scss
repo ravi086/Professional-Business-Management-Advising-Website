@@ -1,0 +1,275 @@
+/*==========================================================================
+Services
+========================================================================== */
+.services__area {
+    background: $thin-bg;
+    &-item {
+        transition: all 0.4s ease-in-out;
+        padding: 40px;
+        background: $white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &-top {
+            h3 {
+                transition: all 0.3s ease-in-out;                
+            }
+            i {
+                &::before {
+                    color: $primary-color;
+                    font-size: 60px;
+                    line-height: 60px;
+                    margin-right: 30px;
+                    display: inline-block;
+                    z-index: 2;                    
+                }
+            }
+        }
+        &-content {
+            border-top: 1px solid $border;
+            transition: all 0.4s ease-in-out;
+            p {
+                transition: all 0.3s ease-in-out;
+            }
+            a {
+                display: inline-block;
+                color: $secondary-color;
+                font-size: 16px;
+                line-height: 26px;
+                font-family: $open;
+                font-weight: 600;
+                transition: all 0.3s ease-in-out;
+                text-transform: uppercase;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 50px;
+                    height: 2px;
+                    background: $primary-color;
+                    bottom: 0;
+                    left: 0;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                    &::after {
+                        width: 90px;
+                    }
+                }
+            }
+        }
+        &:hover {
+            background: $secondary-color;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .services__area-item-top {
+                h3 {
+                    color: $white;
+                }
+            }
+            .services__area-item-content {
+                border-color: $border2;
+                p {
+                    color: $white;
+                }
+                a {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+/*==========================================================================
+Portfolio Details
+========================================================================== */
+.services__details {
+	&-left {
+		&-content {
+			h3 {
+				font-size: 36px;
+				line-height: 46px;
+			}
+		}
+	}
+	&-right {
+        &-widget {
+            &-category {
+                padding: 40px 30px;
+                background: $thin-bg;
+                h4 {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 30px;
+                        height: 4px;
+                        bottom: -5px;
+                        left: 0;
+                        background: $primary-color;					
+                    }
+
+                }
+                ul {
+                    li:last-child {
+                        margin: 0;
+                    }
+                    li {
+                        margin-bottom: 15px;
+                        a {
+                            display: inline-block;
+                            background: $white;
+                            width: 100%;
+                            height: 50px;
+                            line-height: 50px;
+                            padding-left: 15px;
+                            text-transform: uppercase;
+                            font-family: $open;
+                            font-size: 14px;
+                            color: $secondary-color;
+                            font-weight: 700;
+                            position: relative;
+                            transition: all 0.3s ease-in-out; 
+                            left: 0;
+                            i {
+                                &::before {
+                                    color: $primary-color;
+                                    transition: all 0.5s ease-in-out; 
+                                    opacity: 0;
+                                    margin-right: -15px;
+                                }
+                            }
+                            &:hover {
+                                color: $primary-color;
+                                i {
+                                    &::before {
+                                        margin-right: 7px;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+		&-help {
+			position: relative;
+			padding: 50px 30px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			&::after {
+				position: absolute;
+				left: 0;
+				top: 0;
+				content: '';
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+				background: $secondary-color;
+				opacity: 0.9;
+			}
+			h4 {
+				position: relative;
+				color: $white;
+				z-index: 1;
+				&::before {
+					position: absolute;
+					content: '';
+					width: 30px;
+					height: 4px;
+					bottom: -5px;
+					left: 0;
+					background: $primary-color;					
+				}
+			}
+			p {
+				position: relative;
+				z-index: 1;				
+			}
+			&-item {
+				position: relative;
+				z-index: 1;
+				&-icon {
+					i {
+						&::before {
+							color: $primary-color;
+							font-size: 40px;
+							margin-right: 10px;
+						}
+					}
+				}
+				&-content {
+					span {
+						text-transform: uppercase;
+						font-family: $open;
+						font-size: 14px;
+						line-height: 24px;
+						font-weight: 700;
+					}
+					p {
+						font-size: 18px;
+						line-height: 28px;
+						font-weight: 600;
+						color: $border;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1199px) {
+    .services__area {
+        &-item {
+            padding: 40px 30px;
+            &-top {
+                h3 {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                i {
+                    &::before {
+                        margin-right: 20px;                   
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .services__area {
+        &-item {
+            padding: 40px;
+            &-top {
+                h3 {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+                i {
+                    &::before {
+                        margin-right: 20px;                   
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 360px) {
+    .services__area {
+        &-item {
+            padding: 30px;
+            &-top {
+                h3 {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                i {
+                    &::before {
+                        margin-right: 15px;                   
+                    }
+                }
+            }
+        }
+    }
+}

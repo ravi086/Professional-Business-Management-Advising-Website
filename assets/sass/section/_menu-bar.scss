@@ -1,0 +1,201 @@
+/*==========================================================================
+Search Box CSS
+==========================================================================*/
+.header__area {
+	&-search {
+		i {
+			cursor: pointer;
+		}
+		&-box {
+			&-icon {
+				position: absolute;
+				right: 50px;
+				top: 50px;
+				font-size: 22px;
+				color: $white;
+				cursor: pointer;
+			}
+			position: fixed;
+			bottom: 0;
+			left: 50%;
+			width: 100%;
+			left: 0;
+			right: 0;
+			height: 0;
+			background: $secondary-color;
+			z-index: 999;
+			transition: .5s;
+			overflow: hidden;
+			& form {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 55%;
+			}
+			& input {
+				background-color: transparent;
+				width: 100%;
+				padding: 10px 0;
+				color: $white;
+				border: 0;
+				border-bottom: 1px solid $white;
+				&:focus {
+					border-bottom: 1px solid $primary-color;
+				}
+			}
+			& button {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 40px;
+				height: 40px;
+				background-color: transparent;
+				text-align: center;
+				font-size: 22px;
+				color: $primary-color;
+				border: 0;
+				outline: none;
+			}
+			&.active {
+				height: 100%;
+				top: 0;
+			}
+		}
+	}
+	&-left{
+		&-contact {
+			background: $primary-color;
+			padding: 21px 30px;
+			&-icon {
+				i {
+					&::before {
+						font-size: 30px;
+						color: $white;
+						margin-right: 20px;
+					}
+				}
+			}
+			&-content {
+				span {
+					color: $secondary-color;
+					text-transform: uppercase;
+					font-family: $open;
+					font-size: 14px;
+					line-height: 24px;
+					font-weight: 700;
+				}
+				p {
+					color: $white;
+					font-family: $open;
+					font-size: 22px;
+					line-height: 32px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+/*==========================================================================
+Responsive Menu Css
+========================================================================== */
+.responsive-menu {
+	position: absolute;
+	top: -8px;
+	right: 0;
+	width: 100%;
+}
+.mean-container {
+	a.meanmenu-reveal {
+		color: $secondary-color;
+		width: 25px;
+		height: 31px;
+		transition: all 0s ease-out 0s;
+		span {	
+			background: $secondary-color;
+			margin-top: 6px;		
+		}
+	}
+	.mean-bar {
+		background: transparent;
+		padding: 0;
+		z-index: 99;
+		a i {
+			font-size: 22px;
+			padding-top: 4px;
+			display: block;
+		}
+	}
+	.mean-nav {
+		background: $thin-bg;
+		margin-top: 71px;
+		li:first-child > a {
+			border: none;
+		}
+		ul li a.mean-expand {
+			background: $primary-color;
+			height: 28px;
+			color: $white;
+			&:hover {
+			background: $primary-color;
+			}
+		}
+	}
+}
+.mean-container .mean-nav ul li a,
+.mean-container .mean-nav ul li li a,
+.mean-container .mean-nav li li:first-child > a {
+	color: $secondary-color;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 700;
+	font-family: "Open Sans", sans-serif;
+	border-top: 1px solid $border;
+	opacity: 1;
+}
+@media (max-width: 1199px) {
+	.header__area {
+		&-left{
+			&-contact {
+				background: $primary-color;
+				padding: 15px 25px;
+				&-icon {
+					i {
+						&::before {
+							font-size: 25px;
+							margin-right: 10px;
+						}
+					}
+				}
+				&-content {
+					p {
+						font-size: 18px;
+						line-height: 28px;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	.header__area {
+		&-transparent-header {
+			padding: 20px 15px;
+		}
+		&-search {
+			display: none;
+		}
+		&-left {
+			display: none;
+		}
+	}
+	.responsive-menu {
+        display: inline-block;
+    }
+	.header__area-menu.header__area-menu-sticky-menu {
+		.header__area-transparent-header {
+			padding: 20px 0;
+		}
+	}
+}

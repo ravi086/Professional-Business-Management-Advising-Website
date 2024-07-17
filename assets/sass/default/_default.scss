@@ -1,0 +1,355 @@
+/*==========================================================================
+Pack
+========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+body {
+	font-family: $roboto;
+	color: $body-color;
+	font-size: 16px;
+	line-height: 26px;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	transition: all 0.4s ease-out 0s;
+}
+a:focus,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+a,
+button {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.4s ease-out 0s;
+}
+a,
+button,
+i {
+	text-decoration: none;
+	color: inherit;
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+ul,
+ol,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+i::before {
+	position: relative;
+	top: 2px;
+}
+input,
+input:hover,
+input:focus,
+input[type=text],
+input[type=email],
+textarea,
+textarea:hover,
+textarea:focus,
+button,
+button:hover,
+button:focus {
+	box-shadow: none;
+	border: 0px;
+	outline: none;
+}
+.form-control:focus {
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+}
+.section-padding {
+	padding: 130px 0px;
+}
+@media (max-width: 575px) {
+	.section-padding {
+		padding: 100px 0px;
+	}
+}
+/*==========================================================================
+Theme Btn CSS
+========================================================================== */
+.theme-banner-btn,
+.theme-bg-btn,
+.border-btn,
+.theme-btn {
+	display: inline-block;
+	background: $primary-color;
+	color: $white;
+	font-size: 16px;
+	padding: 0 39px;
+	text-align: center;
+	font-family: $open;
+	font-weight: 700;
+	z-index: 3;
+	position: relative;
+	transition: all 0.4s ease-in-out;
+	overflow: hidden;
+	text-transform: uppercase;
+	height: 60px;
+	line-height: 60px;
+	i {
+		&::before {
+			font-size: 15px;
+			margin-left: 10px;
+		}
+	}
+}
+.border-btn::before,
+.theme-banner-btn::before,
+.theme-bg-btn::before,
+.theme-btn::before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 0%;
+	border: $primary-color;
+	transform: translate(-50%, -50%) rotate(55deg);
+	z-index: -1;
+	transition: all 0.6s ease-in-out;
+}
+.theme-banner-btn:hover::before,
+.theme-bg-btn:hover::before,
+.border-btn:hover::before,
+.theme-btn:hover::before {
+	height: 380%;
+}
+.theme-banner-btn {
+	&::before{
+		background: $white;
+	}
+	&:hover {
+		color: $primary-color;
+	}
+}
+.theme-bg-btn {
+	background: $secondary-color;
+	&::before{
+		background: $white;
+	}
+	&:hover {
+		color: $primary-color;
+	}
+}
+.border-btn {
+	border: 1px solid $primary-color;
+	background: none;
+	color: $primary-color;
+	&::before{	
+		background: $white;
+	}
+	&:hover {
+		color: $primary-color;
+		border-color: $white;
+	}
+	&:focus {
+		color: $primary-color;
+	}
+}
+.theme-btn {
+	&::before{
+		background: $secondary-color;
+	}
+	&:hover {
+		color: $white;
+	}
+	&:focus {
+		color: $white;
+	}
+}
+/*==========================================================================
+Hedging CSS
+========================================================================== */
+$list: (h1, 90px, 110px, 0, 0, $secondary-color, $open, 800, uppercase),
+(h2, 48px, 62px, 0, 0, $secondary-color, $open, 800, uppercase),
+(h3, 22px, 32px, 0, 0, $secondary-color, $open, 800, uppercase),
+(h4, 20px, 30px, 0, 0, $secondary-color, $open, 800, uppercase),
+(h5, 18px, 28px, 0, 0, $secondary-color, $open, 800, uppercase),
+(h6, 14px, 22px, 0, 0, $secondary-color, $open, 800, uppercase),
+(p, 16px, 26px, 0, 0, $body-color, $roboto, 400);
+@each $name, $size, $height, $p, $m, $color, $font, $weight, $uppercase in $list {
+    #{$name}{
+        font-size: $size;
+        line-height: $height;
+        padding: $p;
+        margin: $m;
+        color: $color;
+        font-family: $font;
+        font-weight: $weight;
+		text-transform: $uppercase;
+    }
+}
+$list: left, center, right;
+@each $i in $list {
+    .t-#{$i} {
+        text-align: $i;
+    }
+}
+@media (max-width: 991px) {
+	$list: left, center, right;
+	@each $i in $list {
+		.lg-#{$i} {
+			text-align: $i;
+		}
+	}
+}
+@media (max-width: 767px) {
+	$list: left, center, right;
+	@each $i in $list {
+		.st-#{$i} {
+			text-align: $i;
+		}
+	}
+}
+@media (max-width: 575px) {
+	$list: left, center, right;
+	@each $i in $list {
+		.dt-#{$i} {
+			text-align: $i;
+		}
+	}
+	h2 {
+		font-size: 38px;
+		line-height: 52px;
+	}
+}
+@media (max-width: 440px) {
+	h2 {
+		font-size: 28px;
+		line-height: 40px;
+	}
+}
+/*==========================================================================
+Preloader CSS
+========================================================================== */
+.spinner {
+	width: 80px;
+	height: 80px;
+	position: relative;
+	margin: 100px auto;
+}
+.double-bounce1,
+.double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: $white;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {
+	animation-delay: -1.0s;
+}
+@keyframes sk-bounce {
+	0%, 100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+	50% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
+}
+.theme-loader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: $secondary-color;
+	z-index: 9999999999;
+	& .spinner {
+		left: 50%;
+		top: 50%;
+		margin-left: -40px;
+		margin-top: -40px;
+	}
+}
+/*==========================================================================
+Section Top CSS
+========================================================================== */
+.section-top {
+	display: inline-block;
+	position: relative;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 500;
+	color: $primary-color;
+	text-transform: uppercase;
+	padding-left: 70px;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 60px;
+		height: 2px;
+		left: 0;
+		bottom: 13px;
+		background: $primary-color;
+	}
+}
+/*==========================================================================
+Scroll Top CSS
+========================================================================== */
+.scroll-top {
+	background: $primary-color;
+	bottom: 1%;
+	color: $white;
+	font-size: 20px;
+	height: 50px;
+	line-height: 55px;
+	position: fixed;
+	right: 1%;
+	text-align: center;
+	width: 50px;
+	z-index: 9;
+	cursor: pointer;
+	display: none;	
+	border-radius: 50%;
+}
+/*==========================================================================
+Video Animation CSS
+========================================================================== */
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes animation {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes pulse-border {
+	0% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		opacity: 1;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	}
+	100% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+  bottom: 0;
+}

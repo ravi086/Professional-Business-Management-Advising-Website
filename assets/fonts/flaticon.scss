@@ -1,0 +1,233 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?486e3bca8fe2f940d77c97459750be31") format("truetype"),
+url("./flaticon.woff?486e3bca8fe2f940d77c97459750be31") format("woff"),
+url("./flaticon.woff2?486e3bca8fe2f940d77c97459750be31") format("woff2"),
+url("./flaticon.eot?486e3bca8fe2f940d77c97459750be31#iefix") format("embedded-opentype"),
+url("./flaticon.svg?486e3bca8fe2f940d77c97459750be31#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "report": "\f101",
+    "suitcase": "\f102",
+    "job": "\f103",
+    "profits": "\f104",
+    "analysis": "\f105",
+    "up-arrow": "\f106",
+    "clock": "\f107",
+    "loupe": "\f108",
+    "arrow-left": "\f109",
+    "arrow-right": "\f10a",
+    "big-data": "\f10b",
+    "monitoring": "\f10c",
+    "bullhorn": "\f10d",
+    "data-scientist": "\f10e",
+    "project": "\f10f",
+    "success": "\f110",
+    "management": "\f111",
+    "quote": "\f112",
+    "calendar": "\f113",
+    "digital-marketing": "\f114",
+    "management-1": "\f115",
+    "check": "\f116",
+    "lightbulb": "\f117",
+    "time-is-money": "\f118",
+    "telephone": "\f119",
+    "envelope": "\f11a",
+    "pin": "\f11b",
+    "check-1": "\f11c",
+    "paper-plane": "\f11d",
+    "phone-call": "\f11e",
+    "open-envelope": "\f11f",
+    "email": "\f120",
+    "customer-service": "\f121",
+    "technical-support": "\f122",
+    "action": "\f123",
+    "help": "\f124",
+    "user": "\f125",
+    "chat": "\f126",
+    "customer-service-1": "\f127",
+    "calendar-1": "\f128",
+    "play-button-arrowhead": "\f129",
+    "play-button": "\f12a",
+    "call": "\f12b",
+    "email-1": "\f12c",
+    "locations": "\f12d",
+    "location": "\f12e",
+    "maximize": "\f12f",
+    "close": "\f130",
+    "audit": "\f131",
+    "insurance": "\f132",
+    "left-arrow": "\f133",
+    "right-arrow": "\f134",
+);
+
+.flaticon-report:before {
+    content: map-get($flaticon-map, "report");
+}
+.flaticon-suitcase:before {
+    content: map-get($flaticon-map, "suitcase");
+}
+.flaticon-job:before {
+    content: map-get($flaticon-map, "job");
+}
+.flaticon-profits:before {
+    content: map-get($flaticon-map, "profits");
+}
+.flaticon-analysis:before {
+    content: map-get($flaticon-map, "analysis");
+}
+.flaticon-up-arrow:before {
+    content: map-get($flaticon-map, "up-arrow");
+}
+.flaticon-clock:before {
+    content: map-get($flaticon-map, "clock");
+}
+.flaticon-loupe:before {
+    content: map-get($flaticon-map, "loupe");
+}
+.flaticon-arrow-left:before {
+    content: map-get($flaticon-map, "arrow-left");
+}
+.flaticon-arrow-right:before {
+    content: map-get($flaticon-map, "arrow-right");
+}
+.flaticon-big-data:before {
+    content: map-get($flaticon-map, "big-data");
+}
+.flaticon-monitoring:before {
+    content: map-get($flaticon-map, "monitoring");
+}
+.flaticon-bullhorn:before {
+    content: map-get($flaticon-map, "bullhorn");
+}
+.flaticon-data-scientist:before {
+    content: map-get($flaticon-map, "data-scientist");
+}
+.flaticon-project:before {
+    content: map-get($flaticon-map, "project");
+}
+.flaticon-success:before {
+    content: map-get($flaticon-map, "success");
+}
+.flaticon-management:before {
+    content: map-get($flaticon-map, "management");
+}
+.flaticon-quote:before {
+    content: map-get($flaticon-map, "quote");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-digital-marketing:before {
+    content: map-get($flaticon-map, "digital-marketing");
+}
+.flaticon-management-1:before {
+    content: map-get($flaticon-map, "management-1");
+}
+.flaticon-check:before {
+    content: map-get($flaticon-map, "check");
+}
+.flaticon-lightbulb:before {
+    content: map-get($flaticon-map, "lightbulb");
+}
+.flaticon-time-is-money:before {
+    content: map-get($flaticon-map, "time-is-money");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon-map, "telephone");
+}
+.flaticon-envelope:before {
+    content: map-get($flaticon-map, "envelope");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon-map, "pin");
+}
+.flaticon-check-1:before {
+    content: map-get($flaticon-map, "check-1");
+}
+.flaticon-paper-plane:before {
+    content: map-get($flaticon-map, "paper-plane");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon-map, "phone-call");
+}
+.flaticon-open-envelope:before {
+    content: map-get($flaticon-map, "open-envelope");
+}
+.flaticon-email:before {
+    content: map-get($flaticon-map, "email");
+}
+.flaticon-customer-service:before {
+    content: map-get($flaticon-map, "customer-service");
+}
+.flaticon-technical-support:before {
+    content: map-get($flaticon-map, "technical-support");
+}
+.flaticon-action:before {
+    content: map-get($flaticon-map, "action");
+}
+.flaticon-help:before {
+    content: map-get($flaticon-map, "help");
+}
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
+}
+.flaticon-chat:before {
+    content: map-get($flaticon-map, "chat");
+}
+.flaticon-customer-service-1:before {
+    content: map-get($flaticon-map, "customer-service-1");
+}
+.flaticon-calendar-1:before {
+    content: map-get($flaticon-map, "calendar-1");
+}
+.flaticon-play-button-arrowhead:before {
+    content: map-get($flaticon-map, "play-button-arrowhead");
+}
+.flaticon-play-button:before {
+    content: map-get($flaticon-map, "play-button");
+}
+.flaticon-call:before {
+    content: map-get($flaticon-map, "call");
+}
+.flaticon-email-1:before {
+    content: map-get($flaticon-map, "email-1");
+}
+.flaticon-locations:before {
+    content: map-get($flaticon-map, "locations");
+}
+.flaticon-location:before {
+    content: map-get($flaticon-map, "location");
+}
+.flaticon-maximize:before {
+    content: map-get($flaticon-map, "maximize");
+}
+.flaticon-close:before {
+    content: map-get($flaticon-map, "close");
+}
+.flaticon-audit:before {
+    content: map-get($flaticon-map, "audit");
+}
+.flaticon-insurance:before {
+    content: map-get($flaticon-map, "insurance");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon-map, "left-arrow");
+}
+.flaticon-right-arrow:before {
+    content: map-get($flaticon-map, "right-arrow");
+}

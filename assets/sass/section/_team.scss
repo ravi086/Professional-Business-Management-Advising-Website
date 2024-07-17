@@ -1,0 +1,110 @@
+/*==========================================================================
+Team
+========================================================================== */
+.team__area {
+    &-item {
+        &-image {
+            position: relative;
+            overflow: hidden;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: -75%;
+                z-index: 2;
+                display: block;
+                content: '';
+                width: 40%;
+                height: 100%;
+                transform: skewX(-25deg);
+                background: rgba(255, 255, 255, 0.246);                
+            }
+            img {
+                filter:grayscale(100%);       
+            }
+        }
+        &-content {
+            position: relative;
+            overflow: hidden;
+            padding: 33px 30px;
+            background: $white;
+            max-width: 88%;
+            margin: 0 auto;
+            margin-top: -90px;
+            box-shadow: 0 30px 50px $shadow;
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 500;
+                color: $primary-color;
+                padding: 10px 0;
+            }
+            &-icon {
+                ul {
+                    li {
+                        display: inline-block;
+                        margin-right: 10px;
+                        a {
+                            i {
+                                &::before {
+                                    border: 1px solid $border;
+                                    width: 45px;
+                                    height: 45px;
+                                    line-height: 45px;
+                                    color: $secondary-color;
+                                    transition: all 0.3s ease-in-out; 
+                                    display: inline-block;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                }
+                                &:hover::before {
+                                    background: $primary-color;
+                                    color: $white;
+                                    border-color: $primary-color;
+                                }
+                            }
+                        }
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            & .team__area-item-image {
+                &::before {
+                    animation: animation 0.95s;
+                }
+                img {
+                    filter:grayscale(0);       
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .team__area {
+        &-item {
+            &-content {
+                padding: 25px;
+                &-icon {
+                    ul {
+                        li {
+                            margin-right: 5px;
+                            a {
+                                i {
+                                    &::before {
+                                        width: 35px;
+                                        height: 35px;
+                                        line-height: 35px;
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/*==========================================================================
+Management
+========================================================================== */
+.management__area {
+    background: $secondary-color;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: $secondary-color;
+        opacity: 0.8;
+    }
+    &-title {
+        h2 {
+            color: $white;
+        }
+    }
+    &-contact {
+        display: inline-block;
+        width: 260px;
+        height: 260px;
+        background: $secondary-color;
+        text-align: center;
+        border-radius: 50%;
+        i {
+            &::before {
+                font-size: 35px;
+                color: $white;
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                display: inline-block;
+                background: $primary-color;
+                border-radius: 50%;      
+                top: -15px;
+                margin-bottom: 20px;                          
+            }
+        }
+        span {
+            font-family: $open;
+            font-size: 14px;
+            line-height: 24px;
+            color: $border;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        p {
+            color: $white;
+            font-family: "Open Sans", sans-serif;
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: 700;            
+        }
+    }
+}

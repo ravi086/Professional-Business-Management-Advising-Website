@@ -1,0 +1,41 @@
+/*==========================================================================
+Solution 
+========================================================================== */
+.solution__area {
+    &-bg {
+        background: $primary-color;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 70px 40px;
+        margin-bottom: -103px;
+        position: relative;
+    }    
+    &-left {
+        h2 {
+            color: $white;
+            font-size: 35px;
+            line-height: 45px;
+        }
+    }
+    &-right {
+        margin-top: 7px;
+    }
+}
+@media (max-width: 991px) {
+    .solution__area { 
+        &-bg {
+            padding: 40px 30px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .solution__area { 
+        &-left {
+            h2 {
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+    }
+}

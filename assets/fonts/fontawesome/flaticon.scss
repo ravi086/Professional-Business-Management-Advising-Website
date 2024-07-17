@@ -1,0 +1,29 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?e6ab75a893fbfb39d89b3232c49816ad") format("truetype"),
+url("./flaticon.woff?e6ab75a893fbfb39d89b3232c49816ad") format("woff"),
+url("./flaticon.woff2?e6ab75a893fbfb39d89b3232c49816ad") format("woff2"),
+url("./flaticon.eot?e6ab75a893fbfb39d89b3232c49816ad#iefix") format("embedded-opentype"),
+url("./flaticon.svg?e6ab75a893fbfb39d89b3232c49816ad#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "dots-menu": "\f101",
+);
+
+.flaticon-dots-menu:before {
+    content: map-get($flaticon-map, "dots-menu");
+}

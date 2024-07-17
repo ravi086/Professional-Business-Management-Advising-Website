@@ -1,0 +1,75 @@
+/*==========================================================================
+Counter
+========================================================================== */
+.counter__area {
+    background: $secondary-color;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 260px;
+    &-item {
+        border-right: 1px dashed $body-color;
+        border-radius: 2px;
+        &-icon {
+            i {
+                &::before {
+                    font-size: 45px;
+                    color: $white;
+                    width: 100px;
+                    height: 100px;
+                    line-height: 100px;
+                    display: inline-block;
+                    background: $primary-color;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &-content {
+            h2 {
+                color: $white;
+                padding: 10px;
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
+}
+/*==========================================================================
+Counter About
+========================================================================== */
+.counter__area {
+    &-about {
+        background: $thin-bg;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &-item {
+            border-right: 1px dashed $body-color;
+            border-radius: 2px;
+            &-icon {
+                i {
+                    &::before {
+                        font-size: 45px;
+                        color: $white;
+                        width: 100px;
+                        height: 100px;
+                        line-height: 100px;
+                        display: inline-block;
+                        background: $primary-color;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            &-content {
+                h2 {
+                    color: $secondary-color;
+                    padding: 10px;
+                }
+                p {
+                    color: $secondary-color;
+                }
+            }
+        }        
+    }
+}

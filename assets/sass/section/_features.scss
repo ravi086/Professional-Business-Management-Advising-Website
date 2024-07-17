@@ -1,0 +1,91 @@
+/*==========================================================================
+Features
+========================================================================== */
+.features__area {
+    &-item {
+        padding: 40px 31px;
+        background: $thin-bg;
+        position: relative;
+        transition: all 0.4s ease-in-out;
+        overflow: hidden;
+        span {
+            position: absolute;
+            top: 40px;
+            right: 30px;
+            font-size: 48px; 
+            font-weight: 800;           
+            font-family: $open;
+            color: $primary-color;
+            opacity: 0.3;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 2px;
+            z-index: 2;
+
+        }
+        &-icon {
+            i {
+                &::before {
+                    color: $primary-color;
+                    font-size: 60px;
+                    line-height: 60px;
+                    margin-bottom: 30px;
+                    display: inline-block;
+                    z-index: 2;
+                }
+            }
+        }
+        &-content {
+            h4 {
+                color: $secondary-color;
+                transition: all 0.3s ease-in-out;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        &-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: all .4s ease-in-out;
+            z-index: 1;
+            &::after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background-color: $secondary-color;
+                opacity: 0.9;
+                left: 0;
+                top: 0;                
+            }            
+        }
+        &:hover {
+            .features__area-item-image {
+                opacity: 1;           
+            }
+            h4 {
+                color: $white;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .features__area {
+        &-item {
+            padding: 40px;
+            &-content {
+                h4 {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }    
+}
